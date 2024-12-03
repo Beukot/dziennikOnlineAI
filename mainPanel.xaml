@@ -1,0 +1,64 @@
+﻿<Window x:Class="dziennikOnline.mainPanel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:dziennikOnline"
+        mc:Ignorable="d"
+        Background="Navy"
+        Title="Dziennik" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0" Background="#0000cc">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="8*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0" Name="_classId" FontSize="20px">
+
+            </Label>
+            <TreeView Grid.Row="1" Name="_studentList" Background="#0000cc">
+
+            </TreeView>
+            <Button Grid.Row="2" Content="Wstaw Ocenę" Click="Button_Click" Name="_addGrade">
+                
+            </Button>
+        </Grid>
+
+
+
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="5*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" Background="#000099">
+                <Label Name="_userHeader" FontSize="30px">
+
+                </Label>
+            </Grid>
+
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Label Name="_studentData" Grid.Row="0" FontSize="20px">
+
+                </Label>
+
+                <DataGrid Grid.Row="1" Name="_gradesDataGrid" AutoGenerateColumns="False">
+
+                </DataGrid>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

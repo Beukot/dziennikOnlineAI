@@ -1,0 +1,54 @@
+﻿<Window x:Class="dziennikOnline.loginPanel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:dziennikOnline"
+        mc:Ignorable="d"
+        Background="Navy"
+        Title="Logowanie do dziennika" Height="450" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="36" FontWeight="Bold">
+            LOGOWANIE
+        </Label>
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2">
+                Login
+            </Label>
+            <TextBox Grid.Row="1" Name="_username" FontSize="24" Width="300px" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.RowSpan="2">
+
+            </TextBox>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">
+                Hasło
+            </Label>
+            <TextBox Name="_password" Grid.Row="1" FontSize="24" Width="300px" HorizontalAlignment="Center" VerticalAlignment="Top">
+
+            </TextBox>
+        </Grid>
+
+        <Button Grid.Row="3" Width="200px" Height="50px" FontSize="24" Click="SignIn">
+            Zaloguj
+        </Button>
+    </Grid>
+</Window>

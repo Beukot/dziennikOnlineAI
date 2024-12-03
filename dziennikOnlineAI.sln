@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dziennikOnlineAI", "dziennikOnlineAI.csproj", "{B28DF2DC-647D-4DA7-A31D-D3B9681C29DD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B28DF2DC-647D-4DA7-A31D-D3B9681C29DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B28DF2DC-647D-4DA7-A31D-D3B9681C29DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B28DF2DC-647D-4DA7-A31D-D3B9681C29DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B28DF2DC-647D-4DA7-A31D-D3B9681C29DD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {74B1F8A3-65C5-44D6-9927-BA5C416E8295}
+	EndGlobalSection
+EndGlobal

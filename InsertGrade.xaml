@@ -1,0 +1,77 @@
+﻿<Window x:Class="dziennikOnlineAI.InsertGrade"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:dziennikOnlineAI"
+        mc:Ignorable="d"
+        Background="Navy"
+        Title="InsertGrade" Height="450" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Bold">
+            WSTAW OCENĘ
+        </Label>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24">
+                Przedmiot:
+            </Label>
+
+            <ComboBox Name="_subjects" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Width="100px" FontSize="24">
+
+            </ComboBox>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24">
+                Uczeń:
+            </Label>
+
+            <ComboBox Name="_student" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Width="100px" FontSize="24">
+                
+            </ComboBox>
+        </Grid>
+
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24">
+                Ocena:
+            </Label>
+
+            <ComboBox Name="_grade" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Width="100px" FontSize="24">
+                <ComboBoxItem>1</ComboBoxItem>
+                <ComboBoxItem>2</ComboBoxItem>
+                <ComboBoxItem>3</ComboBoxItem>
+                <ComboBoxItem>4</ComboBoxItem>
+                <ComboBoxItem>5</ComboBoxItem>
+                <ComboBoxItem>6</ComboBoxItem>
+            </ComboBox>
+        </Grid>
+
+        <Button Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24px" Content="Wstaw ocenę" Click="Button_Click">
+
+        </Button>
+    </Grid>
+</Window>
