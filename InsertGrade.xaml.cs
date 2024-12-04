@@ -27,7 +27,7 @@ namespace dziennikOnlineAI
         {
             InitializeComponent();
             _student.ItemsSource = getStudents(getTeachersClass(pesel));
-            _subjects.ItemsSource = getSubjects();
+            getSubjects();
         }
 
         private List<string> getStudents(string klasa)
@@ -95,7 +95,7 @@ namespace dziennikOnlineAI
             }
         }
 
-        private List<string> getSubjects()
+        private void getSubjects()
         {
             string query = $"SELECT nazwa FROM dbo.przedmiot";
             List<string> subjects = new List<string>();
@@ -107,12 +107,17 @@ namespace dziennikOnlineAI
 
                 using (SqlDataReader reader = command.ExecuteReader())
                 {
+                    _subjects.Items.Clear();
+
                     while (reader.Read())
                     {
-                        subjects.Add(String.Format("{0}", reader[0]));
-                    }
+                        ComboBoxItem comboItem = new ComboBoxItem
+                        {
+                            Content = String.Format("{0}", reader[0])
+                        };
 
-                    return subjects;
+                        _subjects.Items.Add(comboItem);
+                    }
                 }
             }
         }
@@ -141,16 +146,15 @@ namespace dziennikOnlineAI
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string student = (_student.SelectedItem as ComboBoxItem)?.Content?.ToString();
-            string subject = (_subjects.SelectedItem as ComboBoxItem)?.Content?.ToString();
-            string grade = (_grade.SelectedItem as ComboBoxItem)?.Content?.ToString();
-
-            string subjectId = getSubjectId(subject);
+            string subject = getSubjectId(_subjects.SelectedItem.ToString()).ToString();
+            string student = "";
+            string grade = "";
 
             Console.WriteLine("xd", student);
             Console.WriteLine("xd2", grade);
+            Console.WriteLine(_subjects.SelectedValue);
 
-            string query = $"INSERT INTO dbo.ocena (id_ucznia, id_przedmiotu, ocena) VALUES ({student}, {subjectId}, {grade})";
+            string query = $"INSERT INTO dbo.ocena (id_ucznia, id_przedmiotu, ocena) VALUES ({student}, {subject}, {grade})";
 
             using (SqlConnection c = new SqlConnection(connection))
             {
